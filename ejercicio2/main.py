@@ -37,8 +37,9 @@ def create_user():
   new_user = User(
     name = request.form.get('name'),
     lastName = request.form.get('lastName'),
-    address = request.form.get('address'),
+    address = request.form.get('address')
   )
+
   db.session.add(new_user)
   db.session.commit()
 
